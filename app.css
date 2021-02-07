@@ -19,14 +19,9 @@ p{
     font-size: 18px
 }
 
-.topNav_wrapper {
-    display: flex;
-    background-color: #013c58;
-    padding: 16px;
-}
-
 .menu a {
     font-family: 'Roboto', sans-serif;
+    /* Roboto from google fonts */
     font-size: 30px;
     font-style: bold;
     color: white;
@@ -34,22 +29,26 @@ p{
     padding: 24px;
 }
 
-.menu {
+.topNav_wrapper {
     display: flex;
+    /* aligns "logo" and "menu" class in one row */
+    background-color: #013c58;
+    padding: 16px;
+}
+
+.menu {
+    display: flex; 
+    /* aligns toggle icon and navigation links in one row */
     margin-left: auto;
+    /* calculates unused horizontal space on the left side of element */
     align-items: center;
+    /* flexbox property - align items vertically */
 }
 
 .toggle_icon {
     display: none;
 }
 
-@media only screen and (max-width: 425px) {
-
-    .article_points {
-        margin-top: 100px;
-    }
-}
 
 @media only screen and (max-width: 768px) {
     
@@ -84,13 +83,21 @@ p{
         
     }
     
-    .navBox {
-        position: absolute;
-        padding-bottom: 20px;
+    .myLinks.responsive {
+        display: flex;
+        flex-direction: column;
     }
-
-    /* .article_points {
-        margin-top: 180px;
-    } */
 }
 
+
+@media only screen and (max-width: 425px) {
+    .article_points {
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+    .article_points {
+        margin-top: 150px;
+    }
+}
