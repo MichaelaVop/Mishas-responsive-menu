@@ -1,23 +1,69 @@
 /*
 font-family: 'Playfair Display', serif;
 font-family: 'Roboto', sans-serif;
-*/
+/* -----------------------------------
+     BASIC STYLES FOR THE WHOLE PAGE 
+------------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 #logo {
     width: 25%;
 }
 .article_points {
-    padding-left: 16px;
-    padding-right: 16px;
+    line-height: 1.5;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
+}
+h1, h2, h3 {
+    text-align: center;
+}
+h3 {
+    font-size: 24px;
+    font-weight: initial;
+    line-height: 1.7;
+}
+h4 {
+    margin-top: 24px;
+    padding: 16px;
+    font-size: 24px;
+    background-color: #F4F4F6;
+    color: #013c58;
+    border-top-style: dotted;
+    border-top-color: #013c58;
 }
 p{
     font-family: 'Roboto', sans-serif;
-    font-size: 18px
+    font-size: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
+.par {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.hlsOne {
+    font-size: 30px;
+    background-color: #F4F4F6;
+    color: #013c58;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.subHl {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/* ----------------------------------------------------
+        NAVIGATION MENU STYLES - DESKTOP LAYOUT 
+-------------------------------------------------------*/
 
 .menu a {
     font-family: 'Roboto', sans-serif;
@@ -49,12 +95,15 @@ p{
     display: none;
 }
 
+/* ----------------------------------
+    MOBILE LAYOUT 
+------------------------------------*/
 
 @media only screen and (max-width: 768px) {
     
     .myLinks {
         display: none;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     .toggle_icon {
         display: flex;
@@ -64,7 +113,7 @@ p{
     .menu {
         flex-direction: column;
         justify-content: center;
-    }
+    } 
     .menu a {
         font-family: 'Roboto', sans-serif;
         font-size: 14px;
@@ -73,23 +122,25 @@ p{
         text-decoration: none;
         padding: 8px 16px;
     }
-
+    /* IN CASE YOU WANT TO HAVE THE NAVIGATION BAR FIXED,
+        You need to adjust remain elemnts to it */ 
     .topNav_wrapper {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
-        padding: 4px 16px;
-        
+        padding: 4px 16px;   
     }
-    
+   
     .myLinks.responsive {
         display: flex;
         flex-direction: column;
     }
 }
 
-
+/* -----------------------------------------------------------
+    Addition to MOBILE LAYOUT With fixed menu - not complete
+----------------------------------------------------------------*/
 @media only screen and (max-width: 425px) {
     .article_points {
         margin-top: 100px;
